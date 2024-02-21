@@ -8,7 +8,6 @@ import {
   Box,
   Link,
   IconButton,
- 
 } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 
@@ -17,10 +16,9 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [selectedType, setSelectedType] = useState('client');
-  
-const navigate = useNavigate();
+
+  const navigate = useNavigate();
   const handleLogin = async (e) => {
-   
     e.preventDefault();
     try {
       const response = await fetch(
@@ -36,7 +34,6 @@ const navigate = useNavigate();
       const data = await response.json();
       console.log(data); // Handle response data as needed (e.g., store token in local storage)
       navigate('/login-success');
-      
     } catch (error) {
       console.error('Error:', error);
     }
@@ -59,7 +56,7 @@ const navigate = useNavigate();
       <Container component="main" maxWidth="xs">
         <Box
           sx={{
-            backgroundColor: 'rgba(255, 182, 193,0.5)',
+            backgroundColor: '#f6d8e0',
             borderRadius: '5px',
             width: '100%',
             '@media (min-width:600px)': {
@@ -176,7 +173,23 @@ const navigate = useNavigate();
             </Typography>
             <TextField
               required
-              sx={{ width: '75%', margin: '5%' }}
+              sx={{
+                width: '75%',
+                margin: '5%',
+                backgroundColor: '#fff',
+                borderRadius: '10px',
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: '#f6d8e0',
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#f6d8e0',
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#f6d8e0',
+                  },
+                },
+              }}
               id="email"
               label="Email"
               name="email"
@@ -185,11 +198,28 @@ const navigate = useNavigate();
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter Email"
+              InputLabelProps={{ style: { color: '#000' } }}
             />
 
             <TextField
               required
-              sx={{ width: '75%', margin: '5%' }}
+              sx={{
+                width: '75%',
+                margin: '5%',
+                backgroundColor: '#fff',
+                borderRadius: '10px',
+                '& .MuiOutlinedInput-root': {
+                  '& fieldset': {
+                    borderColor: '#f6d8e0',
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#f6d8e0',
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#f6d8e0',
+                  },
+                },
+              }}
               name="password"
               label="Password"
               type={showPassword ? 'text' : 'password'}
@@ -198,6 +228,7 @@ const navigate = useNavigate();
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter Password"
+              InputLabelProps={{ style: { color: '#000' } }}
               InputProps={{
                 endAdornment: (
                   <IconButton
@@ -225,10 +256,12 @@ const navigate = useNavigate();
               sx={{
                 width: '75%',
                 margin: '5%',
-                backgroundColor: 'rgba(255, 182, 193, 0.5)',
+                backgroundColor: '#f6d8e0',
                 '&:hover': {
-                  backgroundColor: 'rgba(255, 182, 193, 0.7)',
+                  backgroundColor: '#f3a6bf',
                 },
+                color: '#000',
+                borderRadius: '10px',
               }}
             >
               Sign In

@@ -102,13 +102,13 @@ const navigate = useNavigate();
                 borderRadius: '10px',
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&:hover fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&.Mui-focused fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                 },
               }}
@@ -129,13 +129,13 @@ const navigate = useNavigate();
                 borderRadius: '10px',
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&:hover fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&.Mui-focused fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                 },
               }}
@@ -157,13 +157,13 @@ const navigate = useNavigate();
                 borderRadius: '10px',
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&:hover fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&.Mui-focused fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                 },
               }}
@@ -184,13 +184,13 @@ const navigate = useNavigate();
                 borderRadius: '10px',
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&:hover fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&.Mui-focused fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                 },
               }}
@@ -217,13 +217,13 @@ const navigate = useNavigate();
                 borderRadius: '10px',
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&:hover fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&.Mui-focused fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                 },
               }}
@@ -246,13 +246,13 @@ const navigate = useNavigate();
                 borderRadius: '10px',
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&:hover fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                   '&.Mui-focused fieldset': {
-                    borderColor: '#fff',
+                    borderColor: '#f6d8e0',
                   },
                 },
               }}
