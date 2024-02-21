@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   TextField,
   Button,
@@ -15,7 +16,7 @@ const SignUp = () => {
   const [gender, setGender] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-
+const navigate = useNavigate();
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
@@ -35,6 +36,7 @@ const SignUp = () => {
       });
       const data = await response.json();
       console.log(data); // Handle response data as needed
+      navigate('/signup-success');
     } catch (error) {
       console.error('Error:', error);
     }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   TextField,
   Button,
@@ -7,6 +8,7 @@ import {
   Box,
   Link,
   IconButton,
+ 
 } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 
@@ -15,9 +17,10 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [selectedType, setSelectedType] = useState('client');
-  const [message, setMessage] = useState('');
-
+  
+const navigate = useNavigate();
   const handleLogin = async (e) => {
+   
     e.preventDefault();
     try {
       const response = await fetch('http://localhost:5300/auth/login', {
@@ -29,7 +32,8 @@ const Login = () => {
       });
       const data = await response.json();
       console.log(data); // Handle response data as needed (e.g., store token in local storage)
-      setMessage(data.message);
+      navigate('/login-success');
+      
     } catch (error) {
       console.error('Error:', error);
     }
