@@ -7,6 +7,7 @@ import {
   Container,
   Box,
   MenuItem,
+  Link
 } from '@mui/material';
 
 const SignUp = () => {
@@ -273,6 +274,12 @@ const navigate = useNavigate();
             >
               Sign Up
             </Button>
+            <Typography variant="body2" align="center" sx={{ mb: 2 }}>
+              Already have an account?{' '}
+              <Link href="/" color="primary">
+                Login
+              </Link>
+            </Typography>
           </Box>
         </Box>
       </Container>
