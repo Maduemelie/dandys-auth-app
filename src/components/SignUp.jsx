@@ -20,20 +20,23 @@ const navigate = useNavigate();
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5300/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          gender,
-          email,
-          password,
-          confirmPassword,
-        }),
-      });
+      const response = await fetch(
+        'https://dandys-backend.onrender.com/auth/register',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            gender,
+            email,
+            password,
+            confirmPassword,
+          }),
+        }
+      );
       const data = await response.json();
       console.log(data); // Handle response data as needed
       navigate('/signup-success');

@@ -23,13 +23,16 @@ const navigate = useNavigate();
    
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5300/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        'https://dandys-backend.onrender.com/auth/login',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
       const data = await response.json();
       console.log(data); // Handle response data as needed (e.g., store token in local storage)
       navigate('/login-success');
