@@ -16,9 +16,8 @@ const ForgotPassword = () => {
     }
     try {
       console.log("Before 'fetch' call");
-      const response =   await fetch(
-
-         'https://dandys-backend.onrender.com/auth/forget-password',
+      const response = await fetch(
+        'https://dandys-backend.onrender.com/auth/forget-password',
         {
           method: 'POST',
           headers: {
@@ -29,11 +28,11 @@ const ForgotPassword = () => {
       );
       console.log("After 'fetch' call");
       if (response.ok) {
-        console.log("Response is ok", response);
+        console.log('Response is ok', response);
         setSuccessMessage('Password reset link sent successfully');
         setErrorMessage('');
       } else {
-        console.log("Response is not ok", response);
+        console.log('Response is not ok', response);
         setErrorMessage('Failed to send password reset link');
         setSuccessMessage('');
       }
