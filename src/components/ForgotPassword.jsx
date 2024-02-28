@@ -33,6 +33,7 @@ const ForgotPassword = () => {
         setSuccessMessage('Password reset link sent successfully');
         setErrorMessage('');
       } else {
+        console.log("Response is not ok", response);
         setErrorMessage('Failed to send password reset link');
         setSuccessMessage('');
       }
