@@ -8,6 +8,7 @@ const ForgotPassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("email form")
     if (!validateEmail(email)) {
       setErrorMessage('Please enter a valid email address');
       setSuccessMessage('');
@@ -16,6 +17,7 @@ const ForgotPassword = () => {
     try {
       const response = await fetch(
         'https://dandys-backend.onrender.com/auth/forget-password',
+        
         {
           method: 'POST',
           headers: {
