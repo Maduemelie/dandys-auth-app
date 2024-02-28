@@ -8,16 +8,17 @@ const ForgotPassword = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("email form")
+    console.log('email form');
     if (!validateEmail(email)) {
       setErrorMessage('Please enter a valid email address');
       setSuccessMessage('');
       return;
     }
     try {
+      console.log("Before 'fetch' call");
       const response = await fetch(
-        'https://dandys-backend.onrender.com/auth/forget-password',
-        
+
+         'https://dandys-backend.onrender.com/auth/forget-password',
         {
           method: 'POST',
           headers: {
@@ -26,6 +27,7 @@ const ForgotPassword = () => {
           body: JSON.stringify({ email }),
         }
       );
+      console.log("Before 'fetch' call");
       if (response.ok) {
         setSuccessMessage('Password reset link sent successfully');
         setErrorMessage('');
