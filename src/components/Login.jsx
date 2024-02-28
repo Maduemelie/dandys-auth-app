@@ -245,7 +245,7 @@ const Login = () => {
               align="right"
               sx={{ textAlign: 'right', width: '75%', margin: '5%' }}
             >
-              <Link href="#" color="#000">
+              <Link href="/forgot-password" color="#000">
                 Forgot Password?
               </Link>
             </Typography>
