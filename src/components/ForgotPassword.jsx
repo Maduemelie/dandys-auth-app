@@ -16,7 +16,7 @@ const ForgotPassword = () => {
     }
     try {
       console.log("Before 'fetch' call");
-      const response = await fetch(
+      const response =  fetch(
 
          'https://dandys-backend.onrender.com/auth/forget-password',
         {
