@@ -27,8 +27,9 @@ const ForgotPassword = () => {
           body: JSON.stringify({ email }),
         }
       );
-      console.log("Before 'fetch' call");
+      console.log("After 'fetch' call");
       if (response.ok) {
+        console.log("Response is ok", response);
         setSuccessMessage('Password reset link sent successfully');
         setErrorMessage('');
       } else {
